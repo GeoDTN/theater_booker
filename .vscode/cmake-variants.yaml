@@ -1,0 +1,48 @@
+sanitizer:
+  default: NoSan # no sanitizer
+  choices:
+    NoSan:
+      short: NoSan
+      long: build without address sanitizer instrumentation
+
+...
+choices: 
+...
+  ASan:
+    short: ASan
+    long: build with address sanitizer instrumentation
+    settings:
+      CMAKE_CXX_FLAGS: "-fsanitize=address -fno-omit-frame-pointer"
+      CMAKE_C_FLAGS: "-fsanitize=address -fno-omit-frame-pointer"
+      CMAKE_EXE_LINKER_FLAGS: "-fsanitize=address"
+
+...
+choices: 
+...
+  MSan:
+    short: MSan
+    long: build with memory sanitizer instrumentation
+    settings:
+      CMAKE_CXX_FLAGS: "-fsanitize=memory"
+      CMAKE_C_FLAGS: "-fsanitize=memory"
+
+...
+choices: 
+...
+  UBSan:
+    short: UBSan
+    long: build with undefined behavior sanitizer instrumentation
+    settings:
+      CMAKE_CXX_FLAGS: "-fsanitize=undefined"
+      CMAKE_C_FLAGS: "-fsanitize=undefined"
+      CMAKE_EXE_LINKER_FLAGS: "-fsanitize=undefined"
+
+...
+choices: 
+...
+  TSan:
+    short: TSan
+    long: build with thread sanitizer instrumentation
+    settings:
+      CMAKE_CXX_FLAGS: "-fsanitize=thread"
+      CMAKE_C_FLAGS: "-fsanitize=thread"

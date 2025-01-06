@@ -8,8 +8,13 @@ conan-cache/
 CMakeUserPresets.json
 
 # IDE files
-.vs/
+#.vs/
 .idea/
+#.vscode/
+#!.vscode/settings.json
+#!.vscode/tasks.json
+#!.vscode/launch.json
+#!.vscode/extensions.json
 *.swp
 *~
 _ReSharper*
