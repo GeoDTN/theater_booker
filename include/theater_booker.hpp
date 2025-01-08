@@ -10,7 +10,6 @@
 using std::unordered_set;
 using std::string;
 using std::unordered_map;
-using std::unordered_set;
 
 class theater_booker
 {
